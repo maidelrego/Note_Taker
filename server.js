@@ -38,7 +38,7 @@ app.get("/api/notes", function (req, res) {
 app.post("/api/notes", function (req, res) {
   req.body.id = id++;
   db.push(req.body);
-  fs.writeFile("./db/db.json", JSON.stringify(db), function (err) {
+  fs.writeFile("./db.json", JSON.stringify(db), function (err) {
     if (err) {
       console.log(err);
     }
